@@ -3,13 +3,11 @@ import requests
 import pandas as pd
 import plotly.express as px
 from dash import Dash, Input, Output, dcc, html, callback
-import geopandas as gpd
 
 DATASET1_URL = "https://drive.google.com/uc?export=download&id=1ePenLkW0ObjodzXtvLFpJu-PthLOD82P"
 DATASET2_URL = "https://drive.google.com/uc?export=download&id=1q1YXEZgMLyZceQdhc8buToaMtGg0G1IE"
 DATASET1_PATH = os.path.abspath('datasets/WHR2023.csv')
 DATASET2_PATH = os.path.abspath('datasets/WHR.csv')
-world_geo = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
 
 
 def download(url, filename="Dataset.csv"):
